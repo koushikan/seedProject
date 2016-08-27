@@ -1,0 +1,23 @@
+$form-margin :30px !default;
+$font-color: seagreen ;
+@mixin center-layout {
+  left:50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+}
+
+.ctr-1 {
+  font-color:$font-color;
+  background: lightgrey;
+  position: absolute;
+  @include  center-layout ;
+  .form-input {
+    margin: $form-margin;
+  }
+}
+
+
