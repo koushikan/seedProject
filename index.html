@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <title>MY APP</title>
+
+      <link rel="stylesheet" href="app.css" />
+
+      <script src="node_modules/jquery/dist/jquery.js"></script>
+      <script src="node_modules/angular/angular.js"></script>
+      <script src="node_modules/angular-uuid4/angular-uuid4.js"></script>
+      <script src="node_modules/angular-bootstrap/ui-bootstrap.js"></script>
+      <script src="node_modules/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+      <script src="node_modules/angular-animate/angular-animate.js"></script>
+      <script src="node_modules/angular-route/angular-route.js"></script>
+      <script src="dist/public/script.js"></script>
+      <script src="app.js"></script>
+
+  </head>
+  <body>
+
+<div id="app" ng-app="App">
+    <div id="app-navigation">
+
+		<ul  grouplist></ul>
+
+		<div id="app-settings">
+			<div id="app-settings-header">
+				<button class="settings-button"
+						data-apps-slide-toggle="#app-settings-content">haha
+				</button>
+			</div>
+			<div id="app-settings-content">
+				<addressBookList></addressBookList>
+				<contactImport></contactImport>
+			</div>
+		</div>
+    </div>
+
+
+	<div id="app-content">
+		<div class="app-content-list">
+			<contactlist></contactlist>
+		</div>
+		<div class="app-content-detail" ng-view></div>
+     </div>
+</div>
+<div style = "width:500px;height:500px; overflow:visible ">
+    <div style = "width:33% ;height:100%;background-color:gray;">A</div>
+    <div style = "width:33% ;background-color:green;overflow:auto">
+    <p>dsaddddddddddddddd
+    dsaaaaaaaaaaaaaa
+    asfasdasdas
+    <p>
+    </div>
+    <div style = "width:33% ;height:100%;background-color:blue;">C</div>
+</div>
+
+
+
+
+  </body>
+</html>
