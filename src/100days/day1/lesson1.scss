@@ -1,5 +1,8 @@
-$form-margin :30px !default;
+$form-margin :20px !default;
 $font-color: seagreen ;
+$dark-blue: #223340;
+
+
 @mixin center-layout {
   left:50%;
   top:50%;
@@ -10,13 +13,26 @@ $font-color: seagreen ;
   -webkit-transform: translate(-50%,-50%);
 }
 
+
+h1 {
+  span {
+    font-weight: bold ;
+    color: $dark-blue ;
+  }
+}
 .ctr-1 {
   font-color:$font-color;
-  background: lightgrey;
+  background: #F3F3F3;
   position: absolute;
+  border: 1px solid #4B5D73;
+  border-radius: 2px;
+  width: 40%;
   @include  center-layout ;
   .form-input {
     margin: $form-margin;
+    font-size:2em;
+    padding: 1.5em 1em;
+    width: 100%;
   }
 }
 

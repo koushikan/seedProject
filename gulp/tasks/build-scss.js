@@ -24,7 +24,9 @@ var args = util.args;
 var IS_DEV = require('../const').IS_DEV;
 var AppRoot = require('../const').AppRoot;
 //
-var minifyCss = require('gulp-minify-css');
+var cleanCSS = require('gulp-clean-css');
+
+
 var gulpif = require('gulp-if');
 
 
@@ -58,7 +60,10 @@ exports.task = function() {
             .pipe(util.autoprefix())
             .pipe(gulp.dest(dest))
             .pipe(gulp.dest(AppRoot+'/'))
-            .pipe(gulpif(!IS_DEV, minifyCss()))
+            .pipe(gulpif(!IS_DEV, cleanCSS({compatibility: 'ie8',debug: true},function(details) {
+                console.log(details.name + ': ' + details.stats.originalSize);
+                console.log(details.name + ': ' + details.stats.minifiedSize);
+            })))
             .pipe(rename({extname: '.min.css'}))
             .pipe(gulp.dest(dest))
     );
